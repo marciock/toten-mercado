@@ -4,13 +4,22 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+
+import { NgInfoModule } from './ng-info/ng-info.module';
+//import {NgWidgetModule} from './ng-widget/ng-widget.module';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgInfoModule,
+   
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
