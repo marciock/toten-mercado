@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import {ServiceKey} from '../service-key';
+
 @Component({
   selector: 'app-key-board',
   templateUrl: './key-board.component.html',
@@ -23,9 +25,21 @@ export class KeyBoardComponent implements OnInit {
   ];
   
 
-  constructor() { }
+  constructor(private serviceKey:ServiceKey) { }
 
   ngOnInit(): void {
+  }
+  clickKey(key:any){
+
+    this.serviceKey.getModel(key);
+
+    //console.log(teste);
+  }
+  cancel(){
+    this.serviceKey.getModel('cancel');
+  }
+  backSpace(){
+    this.serviceKey.getModel('backspace');
   }
 
 }

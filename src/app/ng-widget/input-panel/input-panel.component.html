@@ -1,6 +1,7 @@
 <div class="row">
     <div class="col-lg-8 form-group">
-        <input type="text" class="form-control">
+        <label class="form-label" >{{label}}</label>
+        <input type="text" class="form-control" id="cpf" name="cpf" [value]="cpf" mask="000.000.000-000" [dropSpecialCharacters]="false" [showMaskTyped]="true">
 
     </div>
 </div>
