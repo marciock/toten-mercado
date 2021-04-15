@@ -1,0 +1,24 @@
+<div class=" container border-bottom border-2" style="margin-top: 5em; margin-bottom: 6em;" >
+    
+    <div class="row " >
+        <div class="progress" style="height: 2px;">
+            <div class="progress-bar" role="progressbar" style="width: 25%;"
+            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    </div>
+    
+    
+        <div class="row  " style="margin-left: 20%; margin-top: -2em;">
+            <div class="col" *ngFor="let m of menu">
+                <button class="btn btn-lg  rounded-circle" [class]="m.status" type="button">
+                    <span [class]="m.icon">                    
+                    </span>
+                    
+                </button>
+                <p class="text-wrap text-center " style="width: 8rem;margin-left:-2em;"><strong>{{m.title | uppercase}}</strong></p>
+    
+            </div>
+        </div>
+     
+</div>    
+

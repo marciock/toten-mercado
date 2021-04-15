@@ -8,17 +8,20 @@ import { AppComponent } from './app.component';
 import { NgInfoModule } from './ng-info/ng-info.module';
 import {NgWidgetModule} from './ng-widget/ng-widget.module';
 
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
-    
-    
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgInfoModule,
-    NgWidgetModule
+    NgWidgetModule,
+   
     
   ],
   providers: [],

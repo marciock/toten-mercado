@@ -3,6 +3,7 @@ import { Component, OnInit,Input } from '@angular/core';
 
 import {ServiceKey} from '../service-key';
 
+
 @Component({
   selector: 'app-input-panel',
   templateUrl: './input-panel.component.html',
@@ -11,6 +12,7 @@ import {ServiceKey} from '../service-key';
 export class InputPanelComponent implements OnInit {
   
   @Input() label: string='';
+  
   cpf:string='';
   constructor(private serviceKey:ServiceKey) {
 
@@ -31,7 +33,10 @@ export class InputPanelComponent implements OnInit {
             break;
         
           default:
-            this.cpf +=key;
+            if(this.cpf.length<12){
+              this.cpf +=key;
+            }
+            
             break;
         }
           
